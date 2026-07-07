@@ -1,4 +1,4 @@
-import { BookmarkCheck, Clock3, Database, Layers3, Menu, Radar, Route, Search, Star } from "lucide-react";
+import { BookmarkCheck, BrainCircuit, Clock3, Database, Layers3, Menu, Radar, Route, Search, Star } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +10,7 @@ const nav = [
   { href: "/saved-searches", label: "Saved Searches", icon: Star },
   { href: "/saved-projects", label: "Saved Opportunities", icon: BookmarkCheck },
   { href: "/sources", label: "Sources", icon: Database },
+  { href: "/intelligence", label: "Intelligence Graph", icon: BrainCircuit },
   { href: "/dashboard", label: "Workspace", icon: Layers3 },
 ];
 

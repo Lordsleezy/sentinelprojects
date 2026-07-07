@@ -1,0 +1,34 @@
+---
+type: Company
+id: Company:a-1-electrical
+---
+
+# A 1 Electrical
+
+## Properties
+
+- company_type: Contractor
+- city: SACRAMENTO
+- state: CA
+- website: 
+- phone: 
+- email: 
+- resolution_confidence: 0.98
+- resolution_source: name-normalization
+
+## Outgoing Relationships
+
+- INVOLVED_IN -> [[REPAIR (PATIO w/ FOOTINGS) - 861 WOODSIDE SIERRA]]
+- INVOLVED_IN -> [[REPAIR (PATIO w/ FOOTINGS) - 865 WOODSIDE SIERRA]]
+- INVOLVED_IN -> [[REPAIR (PATIO w/ FOOTINGS) - 640/644 WOODSIDE SIERRA]]
+- INVOLVED_IN -> [[REPAIR (PATIO w/ FOOTINGS) - 736 WOODSIDE SIERRA]]
+- INVOLVED_IN -> [[REPAIR (PATIO w/ FOOTINGS) - 782 WOODSIDE SIERRA]]
+- INVOLVED_IN -> [[REPAIR (PATIO w/ FOOTINGS) - 786 WOODSIDE SIERRA]]
+- INVOLVED_IN -> [[REPAIR (PATIO w/ FOOTINGS) - 615/613 WOODSIDE SIERRA]]
+- INVOLVED_IN -> [[REPAIR (PATIO w/ FOOTINGS) - 628 WOODSIDE SIERRA]]
+- INVOLVED_IN -> [[REPAIR (PATIO w/ FOOTINGS) - 639 WOODSIDE SIERRA]]
+- INVOLVED_IN -> [[REPAIR (PATIO w/ FOOTINGS) - 643 WOODSIDE SIERRA]]
+- INVOLVED_IN -> [[REPAIR (PATIO w/ FOOTINGS) - 609 WOODSIDE SIERRA]]
+
+## Incoming Relationships
+

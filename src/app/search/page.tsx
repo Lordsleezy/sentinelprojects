@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { getProject } from "@/lib/data";
 import { getNextAction, getOpportunityFitLabel, getSourceCoverage, scoreOpportunity } from "@/lib/intelligence";
 import { generateOpportunities } from "@/lib/opportunities";
+import { getContractorVisibleProjects } from "@/lib/project-resolution";
 import { globalSearch } from "@/lib/search";
 import type { Opportunity, OpportunityTrade } from "@/lib/types";
 
@@ -34,17 +35,18 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
   const q = params.q ?? "";
   const results = await globalSearch(q);
   const projectDetails = (await Promise.all(results.projects.map((project) => getProject(project.id)))).filter(Boolean);
+  const visibleProjects = getContractorVisibleProjects(projectDetails as NonNullable<typeof projectDetails[number]>[]).map((item) => item.project);
   const desiredTrade = inferQueryTrade(q);
   const wantsFastMoney = /\b(6 months|six months|90 days|fast money|starting|start)\b/i.test(q);
-  const ranked = projectDetails
+  const ranked = visibleProjects
     .map((project) => {
-      const generated = pickGeneratedOpportunity(project!, desiredTrade, wantsFastMoney);
-      const opportunity = scoreOpportunity(project!);
+      const generated = pickGeneratedOpportunity(project, desiredTrade, wantsFastMoney);
+      const opportunity = scoreOpportunity(project);
       const evidenceBoost = (generated?.evidence.length ?? 0) * 2;
       const tradeBoost = desiredTrade && generated?.trade === desiredTrade ? 25 : 0;
       const horizonBoost = wantsFastMoney && generated?.horizon === "Fast Money" ? 20 : 0;
       const rankScore = opportunity.score + Math.round((generated?.score ?? 0) * 0.35) + evidenceBoost + tradeBoost + horizonBoost;
-      return { project: project!, opportunity, generated, rankScore };
+      return { project, opportunity, generated, rankScore };
     })
     .sort((a, b) => b.rankScore - a.rankScore);
   const top = ranked[0];
@@ -130,7 +132,13 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
               ) : null}
             </section>
             {ranked.length ? ranked.map(({ project }) => <ProjectResultCard key={project.id} project={project} />) : (
-              <Card><CardContent><p className="text-sm text-zinc-500">No project opportunities found.</p></CardContent></Card>
+              <Card>
+                <CardHeader><h2 className="font-semibold">No contractor-visible opportunities yet</h2></CardHeader>
+                <CardContent className="space-y-2 text-sm text-zinc-600">
+                  <p>Matching records may exist internally, but Sentinel Prospects now hides records without actionable contact intelligence.</p>
+                  <p>No contact = no opportunity. Enrich contact data before this appears in contractor-facing results.</p>
+                </CardContent>
+              </Card>
             )}
           </section>
           <aside className="space-y-5">

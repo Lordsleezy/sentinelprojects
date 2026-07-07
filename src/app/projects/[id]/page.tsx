@@ -11,6 +11,7 @@ import { Table, Td, Th } from "@/components/ui/table";
 import { getProject } from "@/lib/data";
 import { contactRoleLabels, getPrimaryContact, getProjectSize, scoreOpportunity, statusStages } from "@/lib/intelligence";
 import { generateOpportunities } from "@/lib/opportunities";
+import { resolveCanonicalProject } from "@/lib/project-resolution";
 import { cn, money, shortDate } from "@/lib/utils";
 
 export default async function ProjectDetailPage({ params }: { params: Promise<{ id: string }> }) {
@@ -23,6 +24,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   const developer = project.companies.find((company) => company.role === "developer");
   const builder = project.companies.find((company) => company.role === "builder");
   const opportunity = scoreOpportunity(project);
+  const resolved = resolveCanonicalProject(project);
   const generatedOpportunities = generateOpportunities(project);
   const primaryGeneratedOpportunity = generatedOpportunities[0];
   const currentStageIndex = statusStages.indexOf(project.status);
@@ -56,6 +58,28 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         </div>
       </header>
 
+      <Card className={cn("mb-5", resolved.eligibility.contractor_visible ? "border-emerald-200 bg-emerald-50" : "border-amber-200 bg-amber-50")}>
+        <CardContent className="p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div>
+              <p className={cn("text-sm font-semibold", resolved.eligibility.contractor_visible ? "text-emerald-800" : "text-amber-800")}>
+                {resolved.eligibility.contractor_visible ? "Contractor-facing opportunity" : "Internal research record"}
+              </p>
+              <p className="mt-1 text-sm text-zinc-700">
+                {resolved.eligibility.contractor_visible
+                  ? resolved.eligibility.reasons.join(" · ")
+                  : `Not shown in contractor-facing search because: ${resolved.eligibility.missing.join(", ")}.`}
+              </p>
+            </div>
+            <div className="grid gap-2 text-sm sm:grid-cols-3 md:min-w-[28rem]">
+              <HeaderFact label="Fast Money Score" value={String(resolved.fast_money_score)} strong={resolved.fast_money_score >= 80} />
+              <HeaderFact label="Contact Confidence" value={`${Math.round(resolved.contact_confidence * 100)}%`} />
+              <HeaderFact label="Resolution Confidence" value={`${Math.round(resolved.resolution_confidence * 100)}%`} />
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
       <div className="space-y-5">
           <Card>
             <CardHeader>
@@ -66,6 +90,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 <p className="text-xs font-semibold uppercase tracking-wide text-zinc-300">Opportunity Score</p>
                 <p className="mt-2 text-5xl font-semibold">{opportunity.score}</p>
                 <p className="mt-2 text-sm text-zinc-300">Estimated timeline: {opportunity.timeline}</p>
+                <p className="mt-1 text-sm text-zinc-300">Fast Money score: {resolved.fast_money_score}</p>
               </div>
               <div className="grid gap-4 md:grid-cols-2">
                 <div>
@@ -77,12 +102,12 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Estimated Contractor Categories</p>
                   <div className="mt-2 flex flex-wrap gap-2">
-                    {opportunity.contractorCategories.map((category) => <Badge key={category}>{category}</Badge>)}
+                    {resolved.trades.map((category) => <Badge key={category}>{category}</Badge>)}
                   </div>
                   <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-zinc-500">Evidence</p>
                   <div className="mt-2 flex flex-wrap gap-2">
-                    {opportunity.evidence.slice(0, 4).map((item) => (
-                      <Link key={item.label} href={item.href} className="text-sm font-medium underline">{item.label}</Link>
+                    {resolved.evidence.slice(0, 4).map((item) => (
+                      <Link key={item.id} href={item.source_url ?? `#${item.id}`} className="text-sm font-medium underline">{item.title}</Link>
                     ))}
                   </div>
                   {opportunity.risks.length ? (
@@ -108,7 +133,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                   <HeaderFact label="Horizon" value={primaryGeneratedOpportunity.horizon} />
                   <HeaderFact label="Score" value={String(primaryGeneratedOpportunity.score)} strong />
                   <HeaderFact label="Estimated Opportunity Value" value={primaryGeneratedOpportunity.estimated_value_label ?? formatRevenueWindow(primaryGeneratedOpportunity.estimated_revenue_low, primaryGeneratedOpportunity.estimated_revenue_high)} />
-                  <HeaderFact label="Start Window" value={formatMonthWindow(primaryGeneratedOpportunity.estimated_start_months, primaryGeneratedOpportunity.estimated_completion_months)} />
+                  <HeaderFact label="Payment Potential" value={formatPaymentWindow(primaryGeneratedOpportunity.estimated_completion_months)} />
                 </div>
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="rounded-md border border-zinc-100 bg-zinc-50 p-3">
@@ -152,14 +177,14 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="md:col-span-2">
                     <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Who To Contact</p>
-                    {primaryGeneratedOpportunity.contacts?.length ? (
+                    {resolved.contacts.length ? (
                       <div className="mt-2 overflow-x-auto rounded-md border border-zinc-100">
                         <table className="w-full text-left text-sm">
                           <thead className="bg-zinc-50 text-xs uppercase tracking-wide text-zinc-500">
                             <tr><th className="p-2">Company</th><th className="p-2">Contact</th><th className="p-2">Phone</th><th className="p-2">Email</th><th className="p-2">Website</th><th className="p-2">Role</th><th className="p-2">Confidence</th><th className="p-2">Source</th></tr>
                           </thead>
                           <tbody>
-                            {primaryGeneratedOpportunity.contacts.map((contact) => (
+                            {resolved.contacts.map((contact) => (
                               <tr key={`${contact.company}-${contact.role}-${contact.source}`} className="border-t border-zinc-100">
                                 <td className="p-2 font-medium text-zinc-950">{contact.company}</td>
                                 <td className="p-2">{contact.name ?? "Not listed"}</td>
@@ -328,7 +353,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           <h2 className="text-base font-semibold">Evidence Panel</h2>
         </CardHeader>
         <CardContent className="space-y-3">
-          {(primaryGeneratedOpportunity?.evidence ?? []).map((evidence) => (
+          {resolved.evidence.map((evidence) => (
             <div key={evidence.id} className="rounded-md border border-zinc-100 p-3 text-sm">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <div>
@@ -375,8 +400,9 @@ function formatRevenueWindow(low?: number | null, high?: number | null) {
   return `${money(low ?? 0)} - ${money(high ?? low ?? 0)}`;
 }
 
-function formatMonthWindow(start?: number | null, completion?: number | null) {
-  if (start === null || start === undefined) return "Unknown";
-  if (completion === null || completion === undefined) return `${start}+ months`;
-  return `${start}-${completion} months`;
+function formatPaymentWindow(completion?: number | null) {
+  if (completion === null || completion === undefined) return "Unknown";
+  if (completion <= 6) return "3-6 months";
+  if (completion <= 12) return "6-12 months";
+  return "12+ months";
 }

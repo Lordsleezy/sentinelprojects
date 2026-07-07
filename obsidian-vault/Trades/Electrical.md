@@ -1,0 +1,94 @@
+---
+type: Trade
+id: Trade:electrical
+---
+
+# Electrical
+
+## Properties
+
+
+## Outgoing Relationships
+
+
+## Incoming Relationships
+
+- [[HVAC conversion to HP]] -> REQUIRES
+- [[Like for Like 4 roof top Package unit change out]] -> REQUIRES
+- [[SOLAR : Solar PV Installation]] -> REQUIRES
+- [[AREA: R07:  Florin Vineyards I & II - Village 2 - Plan 45-11 Elevation]] -> REQUIRES
+- [[AREA: R07:  Florin Vineyards I & II - Village 2 - Plan 45-11 Elevation]] -> REQUIRES
+- [[AREA: R07:  Florin Vineyards I & II - Village 2 - Plan 45-09 Elevation]] -> REQUIRES
+- [[AREA: R07:  Florin Vineyards I & II - Village 2 - Plan 45-08 Elevation]] -> REQUIRES
+- [[SOLAR : 43 MODULES-ROOF MOUNTED - 17.200 KW DC, 11.500 KW AC, & 15.]] -> REQUIRES
+- [[AREA: R06:  New Home Construction]] -> REQUIRES
+- [[SOLAR : AREA: R07:  Florin Vineyards I & II - Village 2 - Plan 45-09A  LOT 276]] -> REQUIRES
+- [[TI (INT EQPT CURB) 6233 BALCKTOP RD]] -> REQUIRES
+- [[AREA: R01:  Roof mounted residential solar with main panel upgrade]] -> REQUIRES
+- [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 9]] -> REQUIRES
+- [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 10]] -> REQUIRES
+- [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 11]] -> REQUIRES
+- [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 12]] -> REQUIRES
+- [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 4]] -> REQUIRES
+- [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 5]] -> REQUIRES
+- [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 6]] -> REQUIRES
+- [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 7]] -> REQUIRES
+- [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 8]] -> REQUIRES
+- [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 2]] -> REQUIRES
+- [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 3]] -> REQUIRES
+- [[install PVC membrane over existing roof]] -> REQUIRES
+- [[AREA: R01:  7240 Rio Linda 3, Rio Linda, CA. SFR]] -> REQUIRES
+- [[AREA: R07:  Repairs After Fire Damage]] -> REQUIRES
+- [[AREA: R04:  Rear house addition.]] -> REQUIRES
+- [[NEW (GATES) - 7575 POWER INN RD]] -> REQUIRES
+- [[STRUC (EXT CANOPY) 2031 DOME LN]] -> REQUIRES
+- [[AREA: R03:  REMOVING 2 EXTERIOR WALLS AND (1) INTERIOR WALL. ADDITION O]] -> REQUIRES
+- [[AREA: R04:  23.76kW PV + ESS Installation]] -> REQUIRES
+- [[AREA: R01:  NEW PHOTOVOLTAIC SYSTEM 9.24 KW DC/11.50 KW AC, WITH ESS]] -> REQUIRES
+- [[SOLAR : AREA: R07: GERBER CREEK UNIT 2 - 2793 Elevation A- Lot 9]] -> REQUIRES
+- [[SOLAR : AREA: R07: GERBER CREEK UNIT 2 - 2793 Elevation B - Lot 8]] -> REQUIRES
+- [[AREA: R01:  proposed 28'x40' pre fab metal ag storage building]] -> REQUIRES
+- [[AREA: R01:  Magnolia	1184	70 Entry porch 134 Rear porch]] -> REQUIRES
+- [[REROOF PROJECT-DWELLING; Re-roof or Overlay Only.]] -> REQUIRES
+- [[AREA: R03:  SolarApp | SA20260325-2133-109-15606-B | 10.250kW PV Roof M]] -> REQUIRES
+- [[AREA: R06:  House Addition-Remodel]] -> REQUIRES
+- [[REPAIR (PATIO w/ FOOTINGS) - 861 WOODSIDE SIERRA]] -> REQUIRES
+- [[REPAIR (PATIO w/ FOOTINGS) - 865 WOODSIDE SIERRA]] -> REQUIRES
+- [[REPAIR (PATIO w/ FOOTINGS) - 640/644 WOODSIDE SIERRA]] -> REQUIRES
+- [[REPAIR (PATIO w/ FOOTINGS) - 736 WOODSIDE SIERRA]] -> REQUIRES
+- [[REPAIR (PATIO w/ FOOTINGS) - 782 WOODSIDE SIERRA]] -> REQUIRES
+- [[REPAIR (PATIO w/ FOOTINGS) - 786 WOODSIDE SIERRA]] -> REQUIRES
+- [[REPAIR (PATIO w/ FOOTINGS) - 615/613 WOODSIDE SIERRA]] -> REQUIRES
+- [[REPAIR (PATIO w/ FOOTINGS) - 628 WOODSIDE SIERRA]] -> REQUIRES
+- [[REPAIR (PATIO w/ FOOTINGS) - 639 WOODSIDE SIERRA]] -> REQUIRES
+- [[REPAIR (PATIO w/ FOOTINGS) - 643 WOODSIDE SIERRA]] -> REQUIRES
+- [[REPAIR (PATIO w/ FOOTINGS) - 609 WOODSIDE SIERRA]] -> REQUIRES
+- [[AREA: R04:  HOLBUS DECK]] -> REQUIRES
+- [[AREA: R08:  Kitchen and Living Room Remodel]] -> REQUIRES
+- [[AREA: R07:  DETACHED ADU]] -> REQUIRES
+- [[TI (3xINTERIOR REMODEL) - 533 PAVILIONS LN]] -> REQUIRES
+- [[SOLAR : AREA: R03: Blossom Ridge-Plan 2704-Elevation C-Lot 11]] -> REQUIRES
+- [[AREA: R02:  SolarApp | SA20260316-2133-87-15606-B | 18.450kW PV Roof Mo]] -> REQUIRES
+- [[EVCS (8 CHARGERS) - 6019 FAIR OAKS BLVD]] -> REQUIRES
+- [[AREA: R08:  7.38kW DC PV roof mount w/ 1 Tesla PW3]] -> REQUIRES
+- [[AREA: R10:  Installation of accessory structure]] -> REQUIRES
+- [[SOLAR : AREA: R10:  Construction of a new single family residence]] -> REQUIRES
+- [[AREA: R10:  AREA: R10:  Minor fire damage repair to sunroom]] -> REQUIRES
+- [[Hopkins Village - Lot 29 ***DIGITAL REVIEW***]] -> REQUIRES
+- [[Hopkins Village - Lot 35 ***DIGITAL REVIEW***]] -> REQUIRES
+- [[BREWER - DETACHED GARAGE]] -> REQUIRES
+- [[WOLFE - SOLAR RM / ESS]] -> REQUIRES
+- [[HAM - ENERGY STORAGE]] -> REQUIRES
+- [[KOLAR- SFD  ***DIGITAL REVIEW***]] -> REQUIRES
+- [[CAMERON ELECTRICAL UPGRADE]] -> REQUIRES
+- [[CHEN - Ground mount solar project]] -> REQUIRES
+- [[HOLZMULLER RM SOLAR]] -> REQUIRES
+- [[Hopkins Village - Unit 42 ***DIGITAL REVIEW***]] -> REQUIRES
+- [[LEVCO - DETACHED GARAGE]] -> REQUIRES
+- [[Hopkins Village - Unit 16 ***DIGITAL REVIEW***]] -> REQUIRES
+- [[HECKENDORN - POOL SOLAR]] -> REQUIRES
+- [[PLACER VINEYARDS Property 1A Village 1A Electrical for Landscaping]] -> REQUIRES
+- [[ALVAREZ-GENERATOR    ****DIGITAL REVIEW****]] -> REQUIRES
+- [[KOPP - UNDERGROUND ELECTRICAL SERVICE]] -> REQUIRES
+- [[ANDREWS - ELECTRICAL]] -> REQUIRES
+- [[SAEED - SOLAR RM]] -> REQUIRES

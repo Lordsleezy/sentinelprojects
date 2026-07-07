@@ -1,7 +1,7 @@
 import { companies, documents, permits, projectCompanies, projects, signals, sources } from "./seed-data";
 import { collectedPermits, collectedProjects, collectedSignals, getCollectedProject, getCollectedProjectDetails } from "./collected-data";
 import { getSupabase } from "./supabase";
-import { generateOpportunities } from "./opportunities";
+import { getContractorVisibleProjects } from "./project-resolution";
 import type { Company, Document, Opportunity, Permit, Project, ProjectDetail, ProjectStatus, ProjectType, Signal } from "./types";
 
 type ProjectFilters = {
@@ -102,8 +102,8 @@ export async function getOpportunities(filters: { q?: string; horizon?: string; 
     ...getCollectedProjectDetails(),
     ...(await Promise.all(projects.slice(0, 200).map((project) => getProject(project.id)))).filter(Boolean) as ProjectDetail[],
   ];
-  return projectDetails
-    .flatMap((project) => generateOpportunities(project))
+  return getContractorVisibleProjects(projectDetails)
+    .flatMap((resolved) => resolved.opportunities)
     .filter((opportunity) => !filters.horizon || opportunity.horizon === filters.horizon)
     .filter((opportunity) => !filters.trade || opportunity.trade === filters.trade)
     .filter((opportunity) => !filters.county || opportunity.county === filters.county)

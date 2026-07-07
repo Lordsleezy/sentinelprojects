@@ -1,0 +1,90 @@
+---
+type: County
+id: County:placer-county
+---
+
+# Placer County
+
+## Properties
+
+
+## Outgoing Relationships
+
+
+## Incoming Relationships
+
+- [[RIVARD -DECK DEMO]] -> LOCATED_IN
+- [[Hopkins Village - Lot 29 ***DIGITAL REVIEW***]] -> LOCATED_IN
+- [[Hopkins Village - Lot 35 ***DIGITAL REVIEW***]] -> LOCATED_IN
+- [[PG&E ROCKLIN SEISMIC + BUILDING ENVELOPE UPGRADES PACKAGE]] -> LOCATED_IN
+- [[BORRET HVAC C/O]] -> LOCATED_IN
+- [[FITZGERALD HVAC]] -> LOCATED_IN
+- [[BREWER - DETACHED GARAGE]] -> LOCATED_IN
+- [[Indian Hill Condo - Deck Rail replacement]] -> LOCATED_IN
+- [[GARCIA - REMODEL / CONVERSION]] -> LOCATED_IN
+- [[Ko - Garage Addition***Digital Submittal***]] -> LOCATED_IN
+- [[Campbell-Reroof]] -> LOCATED_IN
+- [[WOLFE - SOLAR RM / ESS]] -> LOCATED_IN
+- [[EMERSON - HVAC C/O]] -> LOCATED_IN
+- [[HAM - ENERGY STORAGE]] -> LOCATED_IN
+- [[SCHAEFER- HVAC CHANGE OUT]] -> LOCATED_IN
+- [[Garcia - HVAC C/O LIKE FOR LIKE]] -> LOCATED_IN
+- [[MONSOUR - DECK ADDITION AND REBUILD]] -> LOCATED_IN
+- [[Baldetti Deck Addition]] -> LOCATED_IN
+- [[SPRINGHILL SUITES SIGN AND ROCK WALL]] -> LOCATED_IN
+- [[TNHC - EUREKA GROVE - THE COTTAGES - MASTER PLAN #1 LOT 47]] -> LOCATED_IN
+- [[GLEN WILLOW RIOLO VINEYARDS PHASE 2 Courtland - Lot 143]] -> LOCATED_IN
+- [[Placer Vineyards - Property IB - Molise - Lot 205]] -> LOCATED_IN
+- [[LENNAR HOMES - Molise - PLACER VINEYARDS 1B - MASTER PLAN #3  Lot 213]] -> LOCATED_IN
+- [[MODEL HOME WOODSIDE HOMES - BRADY VINEYARDS -  LOT 84]] -> LOCATED_IN
+- [[KOLAR- SFD  ***DIGITAL REVIEW***]] -> LOCATED_IN
+- [[GATZ - ADDITION]] -> LOCATED_IN
+- [[LOCKE MECHANICAL]] -> LOCATED_IN
+- [[BEHRENS - SINGLE FAMILY DWELLING   PAPER SUBMITTAL]] -> LOCATED_IN
+- [[GOLD WATER HEATER]] -> LOCATED_IN
+- [[RICHARDS WATER PLUMBING REPLACEMENT]] -> LOCATED_IN
+- [[PRESBYTERIAN CHURCH PATIO COVER]] -> LOCATED_IN
+- [[BLACKWELL SHED]] -> LOCATED_IN
+- [[Lieberman Addition]] -> LOCATED_IN
+- [[FECHNER - SFD    ****PAPER REVIEW****]] -> LOCATED_IN
+- [[Pinyon Creek II  Unit 13]] -> LOCATED_IN
+- [[JAEGAR GARAGE]] -> LOCATED_IN
+- [[MASTER PLAN Placer Vineyards 1A - 2756 Plan #11]] -> LOCATED_IN
+- [[Gallery - Detached Garage]] -> LOCATED_IN
+- [[MASTER PLAN Placer Vineyards 1A - 2579 Plan #10]] -> LOCATED_IN
+- [[Pinyon Creek II  Unit 6-C2]] -> LOCATED_IN
+- [[CARROLL - ADDITION / REMODEL]] -> LOCATED_IN
+- [[NEAL ADDITION]] -> LOCATED_IN
+- [[CAMERON ELECTRICAL UPGRADE]] -> LOCATED_IN
+- [[ESSY STORAGE BUILDING]] -> LOCATED_IN
+- [[CHEN - Ground mount solar project]] -> LOCATED_IN
+- [[Blakely Remodel/Addition***Digital Submittal***]] -> LOCATED_IN
+- [[HOLZMULLER RM SOLAR]] -> LOCATED_IN
+- [[Hopkins Village - Unit 42 ***DIGITAL REVIEW***]] -> LOCATED_IN
+- [[TNHC - EUREKA GROVE - THE COTTAGES - MASTER PLAN # 2 LOT 46]] -> LOCATED_IN
+- [[LEVCO - DETACHED GARAGE]] -> LOCATED_IN
+- [[Gist Covered Entry]] -> LOCATED_IN
+- [[FRANSCELLA - POOL]] -> LOCATED_IN
+- [[POTTER - RESIDENTIAL REROOF]] -> LOCATED_IN
+- [[NEVADA WAY PROPERTIES SIDING REPAIR]] -> LOCATED_IN
+- [[Icenogle - SFD]] -> LOCATED_IN
+- [[Hopkins Village - Unit 16 ***DIGITAL REVIEW***]] -> LOCATED_IN
+- [[YALANJI  STUCCO REPAIR]] -> LOCATED_IN
+- [[DURK POOL]] -> LOCATED_IN
+- [[Rodriggs DEMO ** Paper Plans**]] -> LOCATED_IN
+- [[6980 WLB LLC - SFD, Lot #5]] -> LOCATED_IN
+- [[Village Walk Townhomes Unit #21 ***DIGITAL REVIEW***]] -> LOCATED_IN
+- [[HECKENDORN - POOL SOLAR]] -> LOCATED_IN
+- [[PLACER VINEYARDS Property 1A Village 1A Electrical for Landscaping]] -> LOCATED_IN
+- [[HURLEY ADDITION]] -> LOCATED_IN
+- [[ALVAREZ-GENERATOR    ****DIGITAL REVIEW****]] -> LOCATED_IN
+- [[BOCO- HVAC C/O]] -> LOCATED_IN
+- [[KOPP - UNDERGROUND ELECTRICAL SERVICE]] -> LOCATED_IN
+- [[Village Walk Townhomes Unit #27 ******DIGITAL REVIEW*****]] -> LOCATED_IN
+- [[ANDREWS - ELECTRICAL]] -> LOCATED_IN
+- [[LENNAR HOMES - Molise - PLACER VINEYARDS 1B MASTER PLAN #3 Lot 241]] -> LOCATED_IN
+- [[WOODSIDE HOMES - BRADY VINEYARDS - MASTER PLAN #6 - LOT 98]] -> LOCATED_IN
+- [[Emilia - Lot 63]] -> LOCATED_IN
+- [[MARIOPSA LOT 44 MASTER PLAN 2  / ELEV A / GAR R]] -> LOCATED_IN
+- [[Lennar Homes - Emilia  - Placer Vineyards Property 1A  MASTER PLAN #9 Lot 124]] -> LOCATED_IN
+- [[SAEED - SOLAR RM]] -> LOCATED_IN

@@ -1,0 +1,34 @@
+---
+type: Company
+id: Company:robert-l-scheid-construction
+---
+
+# Robert L Scheid Construction
+
+## Properties
+
+- company_type: Contractor
+- city: SACRAMENTO
+- state: CA
+- website: 
+- phone: 
+- email: 
+- resolution_confidence: 0.98
+- resolution_source: name-normalization
+
+## Outgoing Relationships
+
+- INVOLVED_IN -> [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 9]]
+- INVOLVED_IN -> [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 10]]
+- INVOLVED_IN -> [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 11]]
+- INVOLVED_IN -> [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 12]]
+- INVOLVED_IN -> [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 4]]
+- INVOLVED_IN -> [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 5]]
+- INVOLVED_IN -> [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 6]]
+- INVOLVED_IN -> [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 7]]
+- INVOLVED_IN -> [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 8]]
+- INVOLVED_IN -> [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 2]]
+- INVOLVED_IN -> [[REPAIR (BALCONIES/LANDINGS) - 2801 MANLOVE RD BLDG 3]]
+
+## Incoming Relationships
+

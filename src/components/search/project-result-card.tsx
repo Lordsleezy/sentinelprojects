@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { getNextAction, getOpportunityFitLabel, getPrimaryContact, getProjectSize, getSourceCoverage, scoreOpportunity } from "@/lib/intelligence";
 import { generateOpportunities } from "@/lib/opportunities";
+import { resolveCanonicalProject } from "@/lib/project-resolution";
 import type { ProjectDetail } from "@/lib/types";
 import { money, shortDate } from "@/lib/utils";
 
@@ -12,6 +13,7 @@ export function ProjectResultCard({ project }: { project: ProjectDetail }) {
   const opportunity = scoreOpportunity(project);
   const coverage = getSourceCoverage(project);
   const generatedOpportunity = generateOpportunities(project)[0];
+  const resolved = resolveCanonicalProject(project);
 
   return (
     <article className="rounded-lg border border-zinc-200 bg-white p-5 shadow-sm hover:border-zinc-300">
@@ -23,6 +25,7 @@ export function ProjectResultCard({ project }: { project: ProjectDetail }) {
           </Link>
           <div className="mt-2 flex flex-wrap gap-2">
             <Badge className="border-zinc-950 bg-zinc-950 text-white">Opportunity Score {opportunity.score}</Badge>
+            <Badge className="border-emerald-200 bg-emerald-50 text-emerald-700">Fast Money {resolved.fast_money_score}</Badge>
             <Badge className="border-emerald-200 bg-emerald-50 text-emerald-700">{opportunity.timingFit}</Badge>
             <Badge>{project.status}</Badge>
             <Badge>{project.project_type}</Badge>
@@ -32,6 +35,7 @@ export function ProjectResultCard({ project }: { project: ProjectDetail }) {
             <Fact label="Estimated Value" value={money(project.estimated_value)} />
             <Fact label="Location" value={`${project.city}, ${project.county}`} />
             <Fact label="Primary Contact" value={primaryContact?.name ?? "No contact information available"} />
+            <Fact label="Contact Confidence" value={`${Math.round(resolved.contact_confidence * 100)}%`} />
             <Fact label="Inferred Trade" value={generatedOpportunity?.trade ?? "Not inferred"} />
             <Fact label="Estimated Opportunity Value" value={generatedOpportunity?.estimated_value_label ?? formatRevenueWindow(generatedOpportunity?.estimated_revenue_low, generatedOpportunity?.estimated_revenue_high)} />
             <Fact label="Estimated Timeline" value={opportunity.timeline} />

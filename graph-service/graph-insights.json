@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Repeat developer or company",
+    "description": "To Be Determined appears on 7 projects.",
+    "entity_id": "Company:to-be-determined",
+    "entity_label": "To Be Determined",
+    "score": 100
+  },
+  {
+    "title": "Repeat developer or company",
+    "description": "Robert L Scheid Construction appears on 11 projects.",
+    "entity_id": "Company:robert-l-scheid-construction",
+    "entity_label": "Robert L Scheid Construction",
+    "score": 100
+  },
+  {
+    "title": "Repeat developer or company",
+    "description": "A 1 Electrical appears on 11 projects.",
+    "entity_id": "Company:a-1-electrical",
+    "entity_label": "A 1 Electrical",
+    "score": 100
+  },
+  {
+    "title": "Common trade pattern",
+    "description": "HVAC appears across 97 projects.",
+    "entity_id": "Trade:hvac",
+    "entity_label": "HVAC",
+    "score": 100
+  },
+  {
+    "title": "Common trade pattern",
+    "description": "Roofing appears across 150 projects.",
+    "entity_id": "Trade:roofing",
+    "entity_label": "Roofing",
+    "score": 100
+  },
+  {
+    "title": "Common trade pattern",
+    "description": "Concrete appears across 150 projects.",
+    "entity_id": "Trade:concrete",
+    "entity_label": "Concrete",
+    "score": 100
+  },
+  {
+    "title": "Common trade pattern",
+    "description": "Fencing appears across 150 projects.",
+    "entity_id": "Trade:fencing",
+    "entity_label": "Fencing",
+    "score": 100
+  },
+  {
+    "title": "Common trade pattern",
+    "description": "Electrical appears across 79 projects.",
+    "entity_id": "Trade:electrical",
+    "entity_label": "Electrical",
+    "score": 100
+  },
+  {
+    "title": "Common trade pattern",
+    "description": "Landscaping appears across 57 projects.",
+    "entity_id": "Trade:landscaping",
+    "entity_label": "Landscaping",
+    "score": 100
+  },
+  {
+    "title": "Common trade pattern",
+    "description": "General appears across 20 projects.",
+    "entity_id": "Trade:general",
+    "entity_label": "General",
+    "score": 100
+  },
+  {
+    "title": "Repeat developer or company",
+    "description": "****Select Edit Below And Enter Name, Address And  Phone Number** appears on 6 projects.",
+    "entity_id": "Company:select-edit-below-and-enter-name-address-and-phone-number",
+    "entity_label": "****Select Edit Below And Enter Name, Address And  Phone Number**",
+    "score": 98
+  },
+  {
+    "title": "Common trade pattern",
+    "description": "Site work appears across 13 projects.",
+    "entity_id": "Trade:site-work",
+    "entity_label": "Site work",
+    "score": 84
+  }
+]

@@ -196,6 +196,24 @@ export type Opportunity = {
   updated_at: string;
 };
 
+export type CanonicalProjectOpportunity = {
+  project: ProjectDetail;
+  canonical_key: string;
+  trades: OpportunityTrade[];
+  opportunities: Opportunity[];
+  evidence: EvidenceRecord[];
+  contacts: ContactIntelligence[];
+  score: number;
+  fast_money_score: number;
+  contact_confidence: number;
+  resolution_confidence: number;
+  eligibility: {
+    contractor_visible: boolean;
+    reasons: string[];
+    missing: string[];
+  };
+};
+
 export type ProjectDetail = Project & {
   permits: Permit[];
   documents: Document[];
