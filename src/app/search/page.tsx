@@ -16,7 +16,7 @@ import type { Opportunity, OpportunityTrade } from "@/lib/types";
 
 const popularSearches = [
   "Fence opportunities in Sacramento",
-  "Projects starting within 90 days",
+  "Opportunities starting within 90 days",
   "Public works fencing bids near Sacramento",
   "Commercial projects needing electrical contractors",
   "Developer activity in Placer County",
@@ -57,7 +57,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
 
   return (
     <AppShell>
-      <PageTitle title={q ? `Search results: ${q}` : "Search Opportunities"} eyebrow="Construction opportunity intelligence">
+      <PageTitle title={q ? `Search results: ${q}` : "Opportunity Search"} eyebrow="Prospect intelligence">
         <Link href="/sources" className="inline-flex items-center gap-2 rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50">
           <Database className="size-4" />
           Sources

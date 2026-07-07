@@ -1,4 +1,4 @@
-# Sentinel Projects Intelligence Report
+# Sentinel Prospects Intelligence Report
 
 Generated: 2026-07-05T07:23:36.958Z
 

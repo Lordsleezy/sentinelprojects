@@ -9,7 +9,7 @@ import { money } from "@/lib/utils";
 
 const suggestedSearches = [
   "Fence opportunities Sacramento six months",
-  "Projects starting within 90 days",
+  "Opportunities starting within 90 days",
   "Roseville subdivisions needing site work",
   "Public works fencing bids near Sacramento",
   "Commercial projects needing electrical contractors",
@@ -34,7 +34,7 @@ const sourceTypes = [
 
 const popularSearchCards = [
   { icon: Clock3, text: "Jobs that can start, finish, and pay within six months" },
-  { icon: MapPin, text: "Sacramento projects ready for fencing bids" },
+  { icon: MapPin, text: "Sacramento opportunities ready for fencing bids" },
   { icon: Building2, text: "Developers active before the GC is obvious" },
 ];
 

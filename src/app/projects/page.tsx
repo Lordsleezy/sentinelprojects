@@ -12,10 +12,10 @@ export default async function ProjectsPage({ searchParams }: { searchParams: Pro
   const [rows, filters] = await Promise.all([getProjects(params), getFilterOptions()]);
   return (
     <AppShell>
-      <PageTitle title="Projects" eyebrow={`${rows.length} opportunities`} />
+      <PageTitle title="Project Records" eyebrow={`${rows.length} opportunities`} />
       <Card className="mb-5 p-4">
         <form className="grid gap-3 md:grid-cols-6">
-          <Input name="q" placeholder="Search projects" defaultValue={params.q} className="md:col-span-2" />
+          <Input name="q" placeholder="Search project records" defaultValue={params.q} className="md:col-span-2" />
           <Select name="city" defaultValue={params.city ?? ""}><option value="">City</option>{filters.cities.map((v) => <option key={v}>{v}</option>)}</Select>
           <Select name="county" defaultValue={params.county ?? ""}><option value="">County</option>{filters.counties.map((v) => <option key={v}>{v}</option>)}</Select>
           <Select name="project_type" defaultValue={params.project_type ?? ""}><option value="">Type</option>{filters.projectTypes.map((v) => <option key={v}>{v}</option>)}</Select>
@@ -27,4 +27,3 @@ export default async function ProjectsPage({ searchParams }: { searchParams: Pro
     </AppShell>
   );
 }
-

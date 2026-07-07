@@ -1,6 +1,6 @@
-# Sentinel Projects Netlify Deployment
+# Sentinel Prospects Netlify Deployment
 
-Deployment target: `projects.sentinelprime.org`
+Deployment target: `prospects.sentinelprime.org`
 
 ## Netlify Build Settings
 
@@ -46,7 +46,7 @@ Do not commit real `.env` files. The repository intentionally commits only `.env
 9. Add the required environment variables listed above.
 10. Deploy the site.
 11. After the first deploy succeeds, open Site configuration -> Domain management.
-12. Add custom domain `projects.sentinelprime.org`.
+12. Add custom domain `prospects.sentinelprime.org`.
 13. Copy the Netlify DNS target shown for the custom domain.
 
 ## Cloudflare DNS Steps
@@ -58,7 +58,7 @@ In Cloudflare for `sentinelprime.org`:
 
 ```text
 Type: CNAME
-Name: projects
+Name: prospects
 Target: <your Netlify DNS target>
 Proxy status: DNS only
 TTL: Auto
@@ -68,6 +68,6 @@ TTL: Auto
 4. Return to Netlify Domain management.
 5. Click Verify DNS configuration.
 6. Wait for Netlify to issue the SSL certificate.
-7. Confirm `https://projects.sentinelprime.org` loads the Sentinel Projects app.
+7. Confirm `https://prospects.sentinelprime.org` loads the Sentinel Prospects app.
 
 Keep the Cloudflare record DNS-only until Netlify verifies and provisions SSL. After SSL is healthy, leave DNS-only unless you intentionally want Cloudflare proxy behavior in front of Netlify.

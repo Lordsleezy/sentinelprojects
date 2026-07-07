@@ -25,7 +25,7 @@ export default async function Dashboard() {
 
   return (
     <AppShell>
-      <PageTitle title="Opportunity Workspace" eyebrow="Saved leads, watches, and source health" />
+      <PageTitle title="Prospects Workspace" eyebrow="Saved leads, watches, and source health" />
       <div className="grid gap-4 md:grid-cols-4">
         {metrics.map((metric) => (
           <Card key={metric.label}>

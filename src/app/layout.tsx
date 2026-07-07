@@ -13,8 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sentinel Projects",
-  description: "Construction intelligence search for public project opportunities.",
+  title: "Sentinel Prospects",
+  description: "Construction opportunity intelligence for permits, planning records, bids, public records, and development signals.",
+  openGraph: {
+    title: "Sentinel Prospects",
+    description: "Construction opportunity intelligence for permits, planning records, bids, public records, and development signals.",
+    url: "https://prospects.sentinelprime.org",
+    siteName: "Sentinel Prospects",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

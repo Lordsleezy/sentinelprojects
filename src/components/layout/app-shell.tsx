@@ -24,7 +24,7 @@ export function AppShell({ children, wide = false }: { children: React.ReactNode
             </summary>
             <div className="absolute left-0 top-12 z-40 w-72 rounded-lg border border-zinc-200 bg-white p-2 shadow-xl">
               <Link href="/" className="mb-2 block rounded-md px-3 py-2">
-                <span className="block text-sm font-semibold">Sentinel Projects</span>
+                <span className="block text-sm font-semibold">Sentinel Prospects</span>
                 <span className="block text-xs text-zinc-500">Construction opportunity search</span>
               </Link>
               <nav className="space-y-1">
@@ -37,7 +37,7 @@ export function AppShell({ children, wide = false }: { children: React.ReactNode
               </nav>
             </div>
           </details>
-          <Link href="/" className="hidden text-sm font-semibold sm:block">Sentinel Projects</Link>
+          <Link href="/" className="hidden text-sm font-semibold sm:block">Sentinel Prospects</Link>
           <form action="/search" className="mx-auto flex w-full max-w-2xl items-center">
             <input
               name="q"

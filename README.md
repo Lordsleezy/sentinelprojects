@@ -1,4 +1,4 @@
-# Sentinel Projects v0.1
+# Sentinel Prospects v0.1
 
 Construction intelligence search for public project opportunities.
 

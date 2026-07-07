@@ -8,9 +8,8 @@ export default async function SavedProjectsPage() {
   const projects = await getProjects();
   return (
     <AppShell>
-      <PageTitle title="Saved Projects" eyebrow="Tracked opportunities" />
+      <PageTitle title="Saved Opportunities" eyebrow="Tracked prospects" />
       <Card><ProjectTable rows={projects.slice(0, 12)} /></Card>
     </AppShell>
   );
 }
-

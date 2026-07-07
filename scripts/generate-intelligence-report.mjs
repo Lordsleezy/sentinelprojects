@@ -45,7 +45,7 @@ const opportunities = records.flatMap((record) => {
 }).sort((a, b) => b.score - a.score);
 
 const report = [
-  "# Sentinel Projects Intelligence Report",
+  "# Sentinel Prospects Intelligence Report",
   "",
   `Generated: ${new Date().toISOString()}`,
   "",
